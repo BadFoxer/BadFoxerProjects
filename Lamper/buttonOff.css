@@ -1,0 +1,39 @@
+.buttonOff {
+    position: relative;
+    background-color: #00bfff;
+    border: none;
+    font-size: 50px;
+    color: #FFFFFF;
+    padding: 200px 200px 200px 200px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    left: 50px;
+    top: 100px;
+    //text-align:left; 
+   // padding-left:200px;
+}
+
+
+.buttonOff:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.buttonOff:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
