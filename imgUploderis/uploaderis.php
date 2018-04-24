@@ -42,7 +42,7 @@ if($img_size > 50000){  // check image size
 <html>
 <body>
 
-<form action="upload.php" method="post" enctype="multipart/form-data">
+<form action="uploaderis.php" method="post" enctype="multipart/form-data">
     Select image to upload:
     <input type="file" name="image" >
     <input type="submit" value="Upload Image" name="submit">
