@@ -8,8 +8,7 @@ private  $img_size;
 private  $img_type;
 private  $target;
 private  $imageFileType;
-
-
+  
 public function __construct(){
 
   $this->image = $_FILES['image']['name']; // image name
@@ -21,13 +20,9 @@ public function __construct(){
     // The pathinfo() function returns an array that contains information about a path.
     //PATHINFO_EXTENSION - return only extension its mean jpg,png,txt and etc..
     $this->imageFileType = strtolower(pathinfo($this->target,PATHINFO_EXTENSION));
-
-
   }
 
 public  function checkImg(){ // image upload check function
-
-   
 
        if(empty($this->temp_name)){ // if image are not selected
   echo "choose picture"; // print out
@@ -38,7 +33,6 @@ else{
   if($this->imageFileType != "jpg" && $this->imageFileType != "png" && $this->imageFileType != "jpeg"
     && $this->imageFileType!= "gif" ) {
     echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-
 }
 
 else{
@@ -51,14 +45,11 @@ if($this->img_size > 50000){  // check image size
   else{
     move_uploaded_file($this->temp_name, $this->target); // put image in to folder
       echo 'sucess' . $this->imageFileType; // if its all ok print out
-  
 }}}
-
 
 }
 // function ends here
 } // class end here
-
 
 if(isset($_POST['submit'])){  // button are pressed
  $upload = new uploader(); // create new instance
